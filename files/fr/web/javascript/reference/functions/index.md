@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions
 original_slug: Web/JavaScript/Reference/Fonctions
 ---
+
 {{jsSidebar("Functions")}}
 
 De manière générale, une fonction est un « sous-programme » qui peut être appelé par du code extérieur à la fonction (ou du code interne dans le cas d'une récursion). Comme le programme, une fonction est composée d'une suite d'instructions qui forment le _corps de la fonction_. Il est parfois possible de _passer_ des valeurs à une fonction et une fonction peut éventuellement _retourner_ (ou _renvoyer_) une valeur.
@@ -65,9 +66,11 @@ Il y a plusieurs façons de définir des fonctions
 
 Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouvez consulter la page de l'instruction {{jsxref("Instructions/function","function")}} pour plus de détails) :
 
-    function nom([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function nom([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction.
@@ -80,9 +83,11 @@ Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouve
 
 L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Opérateurs/L_opérateur_function","function")}} pour plus d'informations) :
 
-    function [nom]([param] [, param] [..., param]) {
-       instructions
-    }
+```
+function [nom]([param] [, param] [..., param]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction. Il est facultatif, auquel cas la fonction devient une fonction anonyme.
@@ -99,7 +104,7 @@ var maFonction = function() {
 }
 ```
 
-Il est également possible de fournir un nom lors de la définition afin de créer une expression de fonction **nommée** :
+Il est également possible de fournir un nom lors de la définition afin de créer une expression de fonction **nommée** :
 
 ```js
 var maFonction = function fonctionNommée(){
@@ -121,13 +126,15 @@ Lorsque les fonctions sont utilisées une unique fois, on peut utiliser une [« 
 
 Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est déclarée.
 
-### Utiliser une déclaration de fonction génératrice (l'instruction `function*`)
+### Utiliser une déclaration de fonction génératrice (l'instruction function\*)
 
 Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
 
-    function* nom([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function* nom([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction.
@@ -136,13 +143,15 @@ Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page s
 - `instructions`
   - : Les instructions qui forment le corps de la fonction.
 
-### Utiliser une expression de générateur (l'expression `function*`)
+### Utiliser une expression de générateur (l'expression function\*)
 
 Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
 
-    function* [nom]([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function* [nom]([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction. Ce paramètre peut être omis, auquel cas la fonction sera une fonction anonyme.
@@ -155,15 +164,17 @@ Une expression de générateur est similaire à une déclaration de fonction gé
 
 Une expression de fonction fléchée possède une syntaxe plus courte et est liée, de façon lexicale, à sa valeur (voir la page sur les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour plus de détails) :
 
-    ([param[, param]]) => {
-       instructions
-    }
+```
+([param[, param]]) => {
+  instructions
+}
 
-    param => expression
+param => expression
+```
 
 - `param`
-  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
-- `instructions `ou` expression`
+  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`. S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple&nbsp;: `toto => 1`).
+- `instructions` ou `expression`
   - : S'il y a plusieurs instructions, elles doivent être encadrées par des accolades. Une expression unique ne doit pas obligatoirement être entourée d'accolades. L'expression est également la valeur de retour implicite de la fonction.
 
 ### Le constructeur `Function`
@@ -172,7 +183,9 @@ Une expression de fonction fléchée possède une syntaxe plus courte et est li�
 
 Comme tous les autres objets, les objets {{jsxref("Function")}} peuvent être créés grâce à l'opérateur `new` :
 
-    new Function (arg1, arg2, ... argN, corpsDeLaFonction)
+```js
+new Function (arg1, arg2, ... argN, corpsDeLaFonction)
+```
 
 - `arg1, arg2, ... argN`
   - : Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "`x`", "`laValeur`", ou "`a,b`".
@@ -189,7 +202,9 @@ L'invocation du constructeur `Function` en tant que fonction (sans utiliser l'op
 
 Comme pour tous les autres objets, les objets {{jsxref("GeneratorFunction")}} peuvent être créés grâce à l'opérateur `new` :
 
-    new GeneratorFunction (arg1, arg2, ... argN, corpsFonction)
+```js
+new GeneratorFunction (arg1, arg2, ... argN, corpsFonction)
+```
 
 - `arg1, arg2, ... argN`
   - : Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "`x`", "`theValue`", ou "`a,b`".
@@ -212,16 +227,16 @@ Il est possible de faire référence aux arguments d'une fonction au sein de cet
 
 - [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : Un objet semblable à un tableau qui contient les arguments passés à la fonction qui est exécutée.
 - [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee) {{Deprecated_inline}} : La fonction en cours d'exécution.
-- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{Obsolete_inline}} : La fonction qui a appelé la fonction courante.
+- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{deprecated_inline}} : La fonction qui a appelé la fonction courante.
 - [`arguments.length`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/length) : Le nombre d'arguments passés à la fonction.
 
 ## Récursion
 
 Une fonction peut faire référence à elle-même et s'appeler elle-même. Il y a trois façons pour qu'une fonction fasse appel à elle-même :
 
-1.  le nom de la fonction
-2.  [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
-3.  une variable interne faisant référence à la fonction
+1. le nom de la fonction
+2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
+3. une variable interne faisant référence à la fonction
 
 Avec l'exemple suivant :
 
@@ -233,9 +248,9 @@ var truc = function toto() {
 
 Ce qui suit sera équivalent au sein de la fonction :
 
-1.  `toto()`
-2.  `arguments.callee()`
-3.  `truc()`
+1. `toto()`
+2. `arguments.callee()`
+3. `truc()`
 
 Une fonction qui s'appelle elle-même est appelée une fonction récursive. D'une certaine manière, une récursion est semblable à une boucle. Une récursion et une boucle exécutent le même code plusieurs fois et s'appuient sur une condition (afin d'éviter une boucle infinie, ou plutôt une récursion infinie ici). Ainsi la boucle suivante :
 
@@ -358,7 +373,7 @@ Cela n'est pas différent du stockage de références avec d'autres objets, mais
 
 ### Imbrication multiple de fonctions
 
-On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée »  (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
+On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée » (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
 
 On peut l'observer avec l'exemple suivant :
 
@@ -377,9 +392,9 @@ A(1); // crée un message d'alerte avec 6 (= 1 + 2 + 3)
 
 Dans cet exemple, C accède à la variable y de B et à la variable x de A. Cela est possible parce que :
 
-1.  `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
-2.  `C` est une fermeture qui contient `B`
-3.  Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
+1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
+2. `C` est une fermeture qui contient `B`
+3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de* `B` et `A` dans cet ordre.
 
 La réciproque n'est pas vraie. `A` ne peut avoir accès à `C`, parce que `A` ne peut accéder ni aux variables ni aux arguments de `B`, or `C` est une variable de `B. C` est donc privé et seulement pour `B`.
 
@@ -398,7 +413,7 @@ function externe() {
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
 
-Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
+Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x` de la fonction `interne` et la variable `x` de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le `x` de la fonction interne l'emporte sur le `x` de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
 
 ## Définition des méthodes
 
@@ -411,14 +426,14 @@ Il est possible de définir des méthodes qui sont accesseurs ou des mutateurs s
 - [set](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
   - : Permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on tentera de modifier cette propriété.
 
-### Syntaxe des définitions de méthode ECMAScript **2015**
+### Syntaxe des définitions de méthode ECMAScript 2015
 
 Avec ECMAScript 2015, il est possible de définir des méthodes de façon plus concise (à la façon de ce qui est déjà possible pour les getters et setters). Voir la page sur [les définitions de méthodes](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode) pour plus d'informations.
 
 ```js
 var obj = {
   toto() {},
-  truc() {}
+  truc() {}
 };
 ```
 
@@ -426,13 +441,13 @@ var obj = {
 
 Comparons les exemples suivants :
 
-1.  une fonction définie grâce au constructeur `Function` assignée à la variable `multiplier`
+1. une fonction définie grâce au constructeur `Function` assignée à la variable `multiplier`
 
     ```js
     var multiplier = new Function("x", "y", "return x * y;");
     ```
 
-2.  une déclaration de fonction d'une fonction appelée `multiplier`
+2. une déclaration de fonction d'une fonction appelée `multiplier`
 
     ```js
     function multiplier(x, y) {
@@ -440,7 +455,7 @@ Comparons les exemples suivants :
     }
     ```
 
-3.  une expression de fonction d'une fonction anonyme assignée à la variable `multiplier`
+3. une expression de fonction d'une fonction anonyme assignée à la variable `multiplier`
 
     ```js
     var multiplier = function(x, y) {
@@ -448,7 +463,7 @@ Comparons les exemples suivants :
     };
     ```
 
-4.  une expression de fonction d'une fonction nommée `fonction_nom` assignée à la variable `multiplier`
+4. une expression de fonction d'une fonction nommée `fonction_nom` assignée à la variable `multiplier`
 
     ```js
     var multiplier = function function_nom(x, y) {
@@ -545,35 +560,35 @@ Une déclaration de fonction peut très facilement (et souvent involontairement)
 
 ### Exemples :
 
-- ```js
-    // déclaration de fonction
-    function toto() {}
+```js
+  // déclaration de fonction
+  function toto() {}
 
+  // expression de fonction
+  (function truc() {})
+
+  // expression de fonction
+  var x = function bonjour() {}
+  ```
+
+```js
+if (x) {
+  // expression de fonction
+  function monde() {}
+}
+```
+
+```js
+// déclaration de fonction
+function a() {
+  // déclaration de fonction
+  function b() {}
+  if (0) {
     // expression de fonction
-    (function truc() {})
-
-    // expression de fonction
-    var x = function bonjour() {}
-    ```
-
-- ```js
-    if (x) {
-       // expression de fonction
-       function monde() {}
-    }
-    ```
-
-- ```js
-    // déclaration de fonction
-    function a() {
-       // déclaration de fonction
-       function b() {}
-       if (0) {
-          // expression de fonction
-          function c() {}
-       }
-    }
-    ```
+    function c() {}
+  }
+}
+```
 
 ## Définir une fonction de façon conditionnelle
 
@@ -607,7 +622,7 @@ Bien que cette fonction ressemble à une déclaration de fonction, il s'agit en 
 
 En JavaScript, les gestionnaires d'événements [DOM](/fr/docs/DOM) (_event handlers_ en anglais) sont des fonctions (différentes des objets contenant une méthode `handleEvent` dans d'autres langages de liaison avec le DOM -_binding languages_ en anglais). Les fontions ont l'objet [event](/fr/docs/DOM/event) comme seul et unique paramètre. Comme tous les autres paramètres, si l'objet événement, n'a pas besoin d'être utilisé, il peut être absent de la liste des paramètres formels.
 
-Les objets d'un document HTML susceptibles de recevoir des événements peuvent être par exemple : `window` (objets` Window`, y compris les objets frames), `document` (les objets `HTMLDocument`), et les éléments (les objets `Element`). Au sein du [DOM HTML](https://www.w3.org/TR/DOM-Level-2-HTML/), les objets recevant des événements possède des propriétés gestionnaires d'événements. Ces propriétés sont les noms des événements en minuscules préfixés par « on » (par exemple `onfocus`). Une autre façon, plus fiable, d'ajouter des auditeurs d'événements, est offert par les [événements DOM de niveau 2](https://www.w3.org/TR/DOM-Level-2-Events/).
+Les objets d'un document HTML susceptibles de recevoir des événements peuvent être par exemple : `window` (objets `Window`, y compris les objets frames), `document` (les objets `HTMLDocument`), et les éléments (les objets `Element`). Au sein du [DOM HTML](https://www.w3.org/TR/DOM-Level-2-HTML/), les objets recevant des événements possède des propriétés gestionnaires d'événements. Ces propriétés sont les noms des événements en minuscules préfixés par « on » (par exemple `onfocus`). Une autre façon, plus fiable, d'ajouter des auditeurs d'événements, est offert par les [événements DOM de niveau 2](https://www.w3.org/TR/DOM-Level-2-Events/).
 
 Note : Les événements font partie de la logique DOM et non de celle de JavaScript. (JavaScript n'est qu'un langage permettant de manipuler le DOM.)
 
@@ -627,13 +642,13 @@ var setBGColor = new Function("document.body.style.backgroundColor = 'white';");
 
 Il est alors possible d'utiliser cette variable pour assigner une fonction à un gestionnaire d'événement. Cela peut se faire de plusieurs manières, en voici deux décrites ici :
 
-1.  écrire dans les propriétés de l'évément DOM HTML
+1. écrire dans les propriétés de l'évément DOM HTML
 
     ```js
     document.form1.colorButton.onclick = setBGColor;
     ```
 
-2.  l'attribut de l'événement HTML
+2. l'attribut de l'événement HTML
 
     ```html
     <input type="button"
@@ -756,7 +771,7 @@ resultat = padZeros(5,4);  // renvoie "0005"
 
 ### Déterminer si une fonction existe
 
-Il est possible de déterminer si oui ou non une fonction existe en utilisant l'opérateur `typeof`. Dans l'exemple qui suit, on teste pour savoir si l'objet` window` possède une propriété appelé `noFunc` qui serait une fonction. Si c'est le cas, elle sera utilisée, sinon on fera autre chose.
+Il est possible de déterminer si oui ou non une fonction existe en utilisant l'opérateur `typeof`. Dans l'exemple qui suit, on teste pour savoir si l'objet `window` possède une propriété appelé `noFunc` qui serait une fonction. Si c'est le cas, elle sera utilisée, sinon on fera autre chose.
 
 ```js
  if ('function' === typeof window.noFunc) {
@@ -770,17 +785,11 @@ Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` -
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                     | Commentaires                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}     | Définition initiale. Implémentée avec JavaScript 1.0                                     |
-| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                                         | {{Spec2('ES5.1')}} |                                                                                          |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}                 | {{Spec2('ES6')}}     | Nouveautés : fonctions fléchées, générateurs, paramètres par défaut, paramètres du reste |
-| {{SpecName('ES6', '#', 'function*')}}                                                                 | {{Spec2('ES6')}}     | Définition initiale.                                                                     |
-| {{SpecName('ES6', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES6')}}     | Définition initiale.                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions")}}
+{{Compat}}
 
 ## Voir aussi
 

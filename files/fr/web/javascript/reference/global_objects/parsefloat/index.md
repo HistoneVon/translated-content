@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 original_slug: Web/JavaScript/Reference/Objets_globaux/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseFloat()`** permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci (_parsing_).
@@ -15,7 +16,9 @@ La fonction **`parseFloat()`** permet de transformer une chaîne de caractères 
 
 ## Syntaxe
 
-    parseFloat(string)
+```js
+parseFloat(string)
+```
 
 ### Paramètres
 
@@ -28,7 +31,7 @@ Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères. S
 
 ## Description
 
-`parseFloat` est une fonction non associée à un objet, disponible au plus haut niveau de l'environnement JavaScript.
+`parseFloat` est une fonction non associée à un objet, disponible au plus haut niveau de l'environnement JavaScript.
 
 `parseFloat` analyse l'argument fourni sous la forme d'une chaîne de caractères et renvoie un nombre flottant correspondant. L'analyse de la chaîne s'arrête dès qu'un caractère qui n'est pas +,-, un chiffre, un point ou un exposant. Ce caractère, ainsi que les suivants, seront ignorés. Les blancs en début et en fin de chaîne sont autorisés.
 
@@ -58,12 +61,12 @@ parseFloat("3.14d'autres caractères non numériques");
 
 var titi = Object.create(null);
 titi.valueOf = function () { return "3.14"; };
-parseFloat(titi);​​​​​
+parseFloat(titi);
 ```
 
 ### Utiliser `parseFloat()` pour renvoyer `NaN`
 
-Dans cet exemple, le résultat obtenu est {{jsxref("<code>NaN</code>")}} :
+Dans cet exemple, le résultat obtenu est {{jsxref("NaN")}} :
 
 ```js
 parseFloat("FF2");
@@ -102,16 +105,11 @@ Attention : ce code n'est qu'un exemple et renverra `NaN` pour des valeurs pourt
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                             | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.3', 'parseFloat')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parsefloat-string', 'parseFloat')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parsefloat-string', 'parseFloat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseFloat")}}
+{{Compat}}
 
 ## Voir aussi
 

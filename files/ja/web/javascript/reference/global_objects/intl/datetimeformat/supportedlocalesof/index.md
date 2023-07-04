@@ -1,23 +1,13 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
-
 
 ## 構文
 
@@ -29,7 +19,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 ### 引数
 
 - `locales`
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページを参照してください。
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
 
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
@@ -43,7 +33,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 
 ## 解説
 
-`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。
+`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。
 
 ## 例
 

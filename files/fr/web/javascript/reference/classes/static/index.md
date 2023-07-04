@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 Le mot-clé **`static`** permet de définir une méthode statique d'une classe. Les méthodes statiques ne sont pas disponibles sur les instances d'une classe mais sont appelées sur la classe elle-même. Les méthodes statiques sont généralement des fonctions utilitaires (qui peuvent permettre de créer ou de cloner des objets par exemple).
@@ -16,7 +17,9 @@ Le mot-clé **`static`** permet de définir une méthode statique d'une classe. 
 
 ## Syntaxe
 
-    static nomMéthode() { ... }
+```js
+static nomMéthode() { ... }
+```
 
 ## Description
 
@@ -77,7 +80,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Depuis les constructeurs de classes et les autres méthodes
 
-Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor`  : `this.constructor.MéthodeStatique()`.
+Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor`  : `this.constructor.MéthodeStatique()`.
 
 ```js
 class StaticMethodCall{
@@ -89,7 +92,7 @@ class StaticMethodCall{
     // 'appel de la méthode statique'
   }
 
-  static  staticMethod(){
+  static staticMethod(){
     return 'appel de la méthode statique.';
   }
 }
@@ -97,14 +100,11 @@ class StaticMethodCall{
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## Voir aussi
 

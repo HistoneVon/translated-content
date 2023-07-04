@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/lastIndexOf
 ---
+
 {{JSRef}}
 
 La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de la dernière occurence de la valeur donnée en argument. Si cette sous-chaîne n'est pas trouvée, la méthode renvoie -1. La recherche s'effectue de la fin vers le début de la chaîne, à partir de `indiceDébut`.
@@ -18,14 +19,16 @@ La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de l
 
 ## Syntaxe
 
-    str.lastIndexOf(valeurRecherchée[, indiceDébut])
+```js
+str.lastIndexOf(valeurRecherchée[, indiceDébut])
+```
 
 ### Paramètres
 
 - `valeurRecherchée`
   - : Une chaîne qu'on recherche dans la chaîne courante. Si ce paramètre n'est pas défini et que `indiceDébut` est utilisé, c'est ce dernier qui sera renvoyé par la fonction.
-- `indiceDébut `{{optional_inline}}
-  - : Paramètre optionnel. L'emplacement, dans la chaîne courante, à partir duquel effectuer la recherche (en partant de la fin de la chaîne et en remontant vers le début). Cela peut être n'importe quel entier. La valeur par défaut est `+Infinity`. Si` indiceDébut > str.length`, toute la chaîne sera parcourue. Si `indiceDébut < 0`,  on aura le même comportement que si `indiceDébut` valait 0.
+- `indiceDébut` {{optional_inline}}
+  - : Paramètre optionnel. L'emplacement, dans la chaîne courante, à partir duquel effectuer la recherche (en partant de la fin de la chaîne et en remontant vers le début). Cela peut être n'importe quel entier. La valeur par défaut est `+Infinity`. Si `indiceDébut > str.length`, toute la chaîne sera parcourue. Si `indiceDébut < 0`, on aura le même comportement que si `indiceDébut` valait 0.
 
 ### Valeur de retour
 
@@ -36,17 +39,17 @@ L'indice de la dernière occurrence de la valeur indiquée, `-1` si elle n'est p
 Les caractères d'une chaîne de caractères sont indexés de gauche à droite. L'indice du premier caractère vaut 0 et l'indice du dernier caractère vaut `maChaîne.length - 1`.
 
 ```js
-'canal'.lastIndexOf('a');     // renvoie 3
-'canal'.lastIndexOf('a', 2);  // renvoie 1
-'canal'.lastIndexOf('a', 0);  // renvoie -1
-'canal'.lastIndexOf('x');     // renvoie -1
+'canal'.lastIndexOf('a');     // renvoie 3
+'canal'.lastIndexOf('a', 2);  // renvoie 1
+'canal'.lastIndexOf('a', 0);  // renvoie -1
+'canal'.lastIndexOf('x');     // renvoie -1
 'canal'.lastIndexOf('c', -5); // renvoie 0
-'canal'.lastIndexOf('c', 0);  // renvoie 0
-'canal'.lastIndexOf('');      // renvoie 5
-'canal'.lastIndexOf('', 2);   // renvoie 2
+'canal'.lastIndexOf('c', 0);  // renvoie 0
+'canal'.lastIndexOf('');      // renvoie 5
+'canal'.lastIndexOf('', 2);   // renvoie 2
 ```
 
-> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
+> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
 
 ### Sensibilité à la casse
 
@@ -76,16 +79,11 @@ console.log('Indice du dernier "new" ' + maChaîne.lastIndexOf('new'));
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.lastIndexOf")}}
+{{Compat}}
 
 ## Voir aussi
 

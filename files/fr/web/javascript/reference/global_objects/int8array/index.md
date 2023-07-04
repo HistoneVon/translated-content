@@ -11,24 +11,27 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Int8Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 8 bits. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).
 
 ## Syntaxe
 
-    new Int8Array(); // apparu avec ES2017
-    new Int8Array(length);
-    new Int8Array(typedArray);
-    new Int8Array(object);
-    new Int8Array(buffer [, byteOffset [, length]]);
+```js
+new Int8Array(); // apparu avec ES2017
+new Int8Array(length);
+new Int8Array(typedArray);
+new Int8Array(object);
+new Int8Array(buffer [, byteOffset [, length]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
 
 ## Propriétés
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int8Array`, la propriété vaudra 1.
+  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int8Array`, la propriété vaudra 1.
 - `Int8Array.length`
   - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int8Array.name")}}
@@ -39,7 +42,7 @@ Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [t
 ## Méthodes
 
 - Int8Array.from()
-  - : Crée un nouvel objet `Int8Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
+  - : Crée un nouvel objet `Int8Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
 - Int8Array.of()
   - : Crée un nouvel objet `Int8Array` à partir d'un nombre variable d'arguments. Voir également la page {{jsxref("Array.of()")}}.
 
@@ -150,32 +153,14 @@ var int8 = new Int8Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                       |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin d'utiliser l'opération interne `ToIndex` et permettre de l'utiliser sans constructeur. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Int8Array")}}
-
-## Notes de compatibilité
-
-À partir d'ECMAScript 2015 (ES6), `Int8Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Int8Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Voir aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés "en/JavaScript typed arrays")
+- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

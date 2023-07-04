@@ -10,11 +10,12 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/of
 ---
+
 {{JSRef}}
 
 La methode **`Array.of()`** permet de créer une nouvelle instance d'objet `Array` à partir d'un nombre variable d'arguments, quels que soient leur nombre ou leur type.
 
-La différence entre **`Array.of()`** et le constructeur **`Array`** se situe dans la gestion de d'arguments entiers : **`Array.of(7)`** crée un tableau avec un seul élément, 7, tandis que **`Array(7)`** produit un tableau avec 7 éléments vides (à ne pas confondre avec des éléments qui auraient explicitement la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined)).
+La différence entre **`Array.of()`** et le constructeur **`Array`** se situe dans la gestion de d'arguments entiers : **`Array.of(7)`** crée un tableau avec un seul élément, 7, tandis que **`Array(7)`** produit un tableau avec 7 éléments vides (à ne pas confondre avec des éléments qui auraient explicitement la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined)).
 
 ```js
 Array.of(7);       // [7]
@@ -26,7 +27,9 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 ## Syntaxe
 
-    Array.of(element0[, element1[, ...[, elementN]]])
+```js
+Array.of(element0[, element1[, ...[, elementN]]])
+```
 
 ### Paramètres
 
@@ -71,14 +74,11 @@ if (!Array.of) {
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.of', 'Array.of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Voir aussi
 

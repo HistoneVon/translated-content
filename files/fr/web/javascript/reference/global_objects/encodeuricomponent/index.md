@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 original_slug: Web/JavaScript/Reference/Objets_globaux/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatres séquences d'échappement UTF-8 correspondantes (quatre séquences seront utilisées uniquement lorsque les caractères à encoder sont composés de deux caractères « _surrogate_ »).
@@ -16,7 +17,9 @@ La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Unifor
 
 ## Syntaxe
 
-    encodeURIComponent(str);
+```js
+encodeURIComponent(str);
+```
 
 ### Paramètres
 
@@ -46,7 +49,7 @@ console.log(encodeURI(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
 
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
 console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // #
+console.log(encodeURIComponent(set3)); // %23
 console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
 ```
 
@@ -63,7 +66,7 @@ console.log(encodeURIComponent('\uD800'));
 console.log(encodeURIComponent('\uDFFF'));
 ```
 
-Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym `" et une seconde (`access`) égale à `admin`.
+Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym`" et une seconde (`access`) égale à `admin`.
 
 Pour [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), les espaces sont remplacés par un '+', aussi, dans ce cas, on pourra ajouter un remplacement supplémentaire après `encodeURIComponent()` pour remplacer "%20" par "+".
 
@@ -118,16 +121,11 @@ function encodeRFC5987ValueChars2(str) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.encodeURIComponent")}}
+{{Compat}}
 
 ## Voir aussi
 

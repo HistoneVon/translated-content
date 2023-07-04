@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Iteration_protocols
 original_slug: Web/JavaScript/Reference/Les_protocoles_iteration
 ---
+
 {{jsSidebar("More")}}
 
 Un des ajouts à ECMAScript 2015 (ES6) n'est ni une nouvelle syntaxe ni un nouvel objet natif mais des protocoles. Ces protocoles peuvent être implémentés par n'importe quel objet qui respecte certaines conventions.
@@ -18,7 +19,7 @@ Il existe deux protocoles concernant l'itération : [le protocole « itérable �
 
 ## Le protocole « itérable »
 
-Le protocole « **itérable** » permet aux objets JavaScript de définir ou de personnaliser leur comportement lors d'une itération, par exemple la façon dont les valeurs seront parcourues avec une boucle {{jsxref("Instructions/for...of", "for..of")}}. Certains types natifs tels que {{jsxref("Array")}} ou {{jsxref("Map")}} possèdent un comportement itératif par défaut, d'autres types, comme {{jsxref("Object")}} n'ont pas ce type de comportement.
+Le protocole « **itérable** » permet aux objets JavaScript de définir ou de personnaliser leur comportement lors d'une itération, par exemple la façon dont les valeurs seront parcourues avec une boucle {{jsxref("Instructions/for...of", "for..of")}}. Certains types natifs tels que {{jsxref("Array")}} ou {{jsxref("Map")}} possèdent un comportement itératif par défaut, d'autres types, comme {{jsxref("Object")}} n'ont pas ce type de comportement.
 
 Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
 
@@ -354,13 +355,6 @@ unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
 [...unObjetGénérateur]
 // [1, 2, 3]
 ```
-
-## Spécifications
-
-| Spécification                                                            | État                         | Commentaires        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Voir aussi
 

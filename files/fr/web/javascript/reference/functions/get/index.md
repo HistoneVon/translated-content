@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/get
 original_slug: Web/JavaScript/Reference/Fonctions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
@@ -18,8 +19,10 @@ La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {get prop() { ... } }
-    {get [expression]() { ... } }
+```js
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
 ### Paramètres
 
@@ -44,7 +47,7 @@ Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("Opérateurs
 
 ### Définir un accesseur avec l'opérateur `get`
 
-Ce code va créer une pseudo-propriété `dernier` de l'objet `o` qui va retourner la dernière entrée du tableau `o.journal `:
+Ce code va créer une pseudo-propriété `dernier` de l'objet `o` qui va retourner la dernière entrée du tableau `o.journal`&nbsp;:
 
 ```js
 var o = {
@@ -140,21 +143,17 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'coucou'
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                           |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Définition initiale                    |
-| {{SpecName('ES2015', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2015')}}     | Ajout des noms de propriétés calculés. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
 - {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), un chapitre du Guide JavaScript

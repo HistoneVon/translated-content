@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Keyed_collections
 original_slug: Web/JavaScript/Guide/Collections_avec_clés
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées avec une clé. Les objets `Map` et `Set` contiennent des éléments sur lesquels on peut itérer dans leur ordre d'insertion.
@@ -33,7 +34,7 @@ sayings.has("bird"); // false
 sayings.delete("dog");
 
 for (var [key, value] of sayings) {
-  console.log(key + " goes " + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -88,7 +89,7 @@ module.exports = Public;
 
 Les objets {{jsxref("Set")}} sont des ensembles de valeurs. Il est possible de les parcourir dans l'ordre d'insertion des éléments. Une valeur d'un élément `Set` ne peut y apparaître qu'une seule fois, il est unique pour cette instance de `Set`.
 
-Le code suivant illustre certaines opérations basiques avec `Set`. Voir aussi la page {{jsxref("Set")}} pour plus d'exemples et l'API complète.
+Le code suivant illustre certaines opérations basiques avec `Set`. Voir aussi la page {{jsxref("Set")}} pour plus d'exemples et l'API complète.
 
 ```js
 var monEnsemble = new Set();

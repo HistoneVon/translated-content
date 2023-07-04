@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/freeze
 ---
+
 {{JSRef}}
 
 La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on empêche d'ajouter de nouvelles propriétés, de supprimer ou d'éditer des propriétés existantes, y compris en ce qui concerne leur caractère énumérable, configurable ou pour l'accès en écriture. L'objet devient ainsi immuable. La méthode renvoie l'objet ainsi « gelé ».
@@ -18,7 +19,9 @@ La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on 
 
 ## Syntaxe
 
-    Object.freeze(obj)
+```js
+Object.freeze(obj)
+```
 
 ### Paramètres
 
@@ -73,7 +76,7 @@ function echec(){
   obj.toto = "bipbip"; // renvoie une TypeError
   delete obj.toto;     // renvoie une TypeError
   delete obj.roxor;    // renvoie true car l'attribut n' a pas été ajouté
-  obj.bipbip = "arf";  // renvoie une  TypeError
+  obj.bipbip = "arf";  // renvoie une TypeError
 }
 
 echec();
@@ -217,15 +220,11 @@ Lorsqu'on utilise la méthode `Object.freeze()`, les propriétés existantes d'u
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}         | {{Spec2('ES6')}}         |                                                        |
-| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## Voir aussi
 

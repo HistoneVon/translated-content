@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/escape
 original_slug: Web/JavaScript/Reference/Objets_globaux/escape
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Attention :** Bien que `escape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
@@ -20,7 +21,9 @@ La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractère
 
 ## Syntaxe
 
-    escape(str)
+```js
+escape(str)
+```
 
 ### Paramètres
 
@@ -33,7 +36,7 @@ Une nouvelle chaîne de caractères dont certains caractères ont été échapp�
 
 ## Description
 
-La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf @\*\_+-./, seront encodés.
+La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf `@*_+-./`, seront encodés.
 
 La forme hexadécimale des caractères dont la valeur du codet est inférieure à 0xFF sera représentée sur deux chiffres : %xx. Pour les caractères avec un code supérieur, quatre chiffres seront utilisés avec le format suivant %**u**xxxx.
 
@@ -50,16 +53,11 @@ escape("@*_+-./");    // "@*_+-./"
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires                                                                                                       |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale.                                                                                               |
-| {{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}             | {{Spec2('ES5.1')}}     | Définie dans l'annexe B (informative) sur la compatibilité.                                                        |
-| {{SpecName('ES6', '#sec-escape-string', 'escape')}}     | {{Spec2('ES6')}}         | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
-| {{SpecName('ESDraft', '#sec-escape-string', 'escape')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles d'ECMAScript pour les navigateurs Web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.escape")}}
+{{Compat}}
 
 ## Voir aussi
 

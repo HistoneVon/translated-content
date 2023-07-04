@@ -1,6 +1,6 @@
 ---
 title: Itérateurs et générateurs
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 tags:
   - Guide
   - Intermediate
@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 original_slug: Web/JavaScript/Guide/iterateurs_et_generateurs
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
 
 Effectuer des traitements sur chacun des éléments d'une collection est une opération très fréquente. Il existe plusieurs outils natifs dans JavaScript pour parcourir une collection, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for), [`map()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map), [`filter()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter). Les itérateurs et les générateurs font de ce concept d'itération une fonctionnalité principale du langage et permettent d'adapter et de personnaliser le comportement des boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of).
@@ -175,7 +176,7 @@ Il est possible de forcer un générateur à lever une exception en utilisant la
 
 Si le mot-clé `yield` n'est pas trouvé lors de la levée de l'exception, l'exception sera propagée jusqu'à l'appel de `throw()`, les appels à `next()` qui suivent renverront une valeur dont la propriété `done` sera `true`.
 
-Si l'exception n'est pas interceptée dans le générateur, elle se propagera jusqu'à l'appel de `throw()` et les appels suivants de `next()` renverront un objet dont la propriété `done `vaut `true`.
+Si l'exception n'est pas interceptée dans le générateur, elle se propagera jusqu'à l'appel de `throw()` et les appels suivants de `next()` renverront un objet dont la propriété `done` vaut `true`.
 
 Les générateurs possèdent une méthode `return(valeur)` qui permet de renvoyer une valeur donnée et de terminer le générateur.
 

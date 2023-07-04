@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration 'X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 tags:
   - Erreur
@@ -9,13 +9,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    ReferenceError: Use before delaration (Edge)
-    ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-    ReferenceError: 'x' is not defined (Chrome)
+```
+ReferenceError: Use before delaration (Edge)
+ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+ReferenceError: 'x' is not defined (Chrome)
+```
 
 ## Type d'erreur
 
@@ -23,7 +26,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_
 
 ## Quel est le problème ?
 
-Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
+Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
 
 ## Exemple
 

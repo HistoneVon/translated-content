@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sinh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la formule, utilisant la constante {{jsxref("Math.E","e")}}, est :
@@ -21,7 +22,9 @@ La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la
 
 ## Syntaxe
 
-    Math.sinh(x)
+```js
+Math.sinh(x)
+```
 
 ### Paramètres
 
@@ -34,7 +37,7 @@ Le sinus hyperbolique de la valeur passée en argument.
 
 ## Description
 
-`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math `n'est pas un constructeur).
+`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
@@ -45,7 +48,7 @@ Math.sinh(1) // 1.1752011936438014
 
 ## Prothèse d'émulation (_polyfill_)
 
-Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}` :`
+Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}&nbsp;:
 
 ```js
 Math.sinh = Math.sinh || function(x){
@@ -64,14 +67,11 @@ Math.sinh = Math.sinh || function(x){
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.sinh")}}
+{{Compat}}
 
 ## Voir aussi
 

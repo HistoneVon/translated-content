@@ -11,13 +11,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getYear
 ---
+
 {{JSRef}} {{Deprecated_header}}
 
 La méthode **`getYear()`** renvoie l'année de la date renseignée, d'après l'heure locale. Parce que `getYear()` ne renvoie pas l'année complète (« bug de l'an 2000 »), cette méthode n'est plus utilisée et doit être remplacée par {{jsxref("Date.getFullYear", "getFullYear")}}.
 
 ## Syntaxe
 
-    dateObj.getYear()
+```js
+dateObj.getYear()
+```
 
 ### Valeur de retour
 
@@ -25,7 +28,7 @@ Un nombre représentant l'année de la date indiquée, selon l'heure locale, auq
 
 ## Description
 
-La méthode `getYear()` renvoie l'année moins 1900 ; par conséquent :
+La méthode `getYear()` renvoie l'année moins 1900&nbsp;; par conséquent&nbsp;:
 
 - Pour les années supérieures ou égales à 2000, la valeur renvoyée par `getYear()` est supérieure ou égale à 100. Par exemple, si l'année est 2026, `getYear()` renvoie 126.
 - Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` renvoie 76.
@@ -37,7 +40,7 @@ Pour prendre en compte les années avant et après 2000, il vaut mieux utiliser 
 
 ### Comportement dans JavaScript 1.2 et versions antérieures
 
-La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres :
+La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres&nbsp;:
 
 - Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` était l'année moins 1900. Par exemple, si l'année était 1976, la valeur renvoyée était 76.
 - Pour les années inférieures à 1900 ou supérieures à 1999, la valeur renvoyée par `getYear` était l'année en quatre chiffres. Par exemple, si l'année était 1856, la valeur renvoyée était 1856. Si l'année était 2026, la valeur renvoyée était 2026.
@@ -81,18 +84,13 @@ var noel.setYear(95);
 var annee = noel.getYear(); // renvoie 95
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                               |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3.                                      |
-| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                             | {{Spec2('ES5.1')}}     | Défini dans l'annexe informative sur la compatibilité.                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}}         | {{Spec2('ES6')}}         | Défini dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ESDraft')}} |                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getYear")}}
+{{Compat}}
 
 ## Voir aussi
 

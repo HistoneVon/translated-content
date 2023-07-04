@@ -11,6 +11,7 @@ translation_of: Web/JavaScript/Reference/Operators
 original_slug: Web/JavaScript/Reference/Opérateurs
 browser-compat: javascript.operators
 ---
+
 {{jsSidebar("Operators")}}
 
 Ce chapitre documente l'ensemble des opérateurs, expressions et mots-clés pour le langage JavaScript.
@@ -143,7 +144,7 @@ Le résultat de l'évaluation fournie par un opérateur d'égalité est toujours
 - [`!=`](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
   - : L'opérateur d'inégalité.
 - [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-  - : L'opérateur d'identité.
+  - : L'opérateur d'égalité stricte.
 - [`!==`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
   - : L'opérateur d'inégalité stricte.
 

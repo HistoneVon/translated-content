@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.
@@ -17,7 +18,9 @@ La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argume
 
 ## Syntaxe
 
-    parseInt(string, base);
+```js
+parseInt(string, base);
+```
 
 ### Paramètres
 
@@ -27,7 +30,7 @@ La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argume
 
   - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
 
-    > **Attention :**La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
+    > **Attention :** La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
 
     Voir cependant la description ci-après qui explicite le comportement par défaut attendu.
 
@@ -104,7 +107,7 @@ parseInt("4e2", 10);
 parseInt("4.7", 10);
 ```
 
-L'exemple suivant renvoie  **`224`** :
+L'exemple suivant renvoie **`224`** :
 
 ```js
 parseInt("0e0", 16);
@@ -158,16 +161,11 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                 | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## Voir aussi
 

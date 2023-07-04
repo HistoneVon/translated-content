@@ -10,47 +10,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Reference/Instructions/export
 ---
+
 {{jsSidebar("Statements")}}
 
-L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
+L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
 
 Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `export` ne peut pas être utilisée dans les scripts embarqués.
 
 ## Syntaxe
 
-    // Exporter des propriétés individuelles
-    export let nom1, nom2, …, nomN; // utilisable avec var, const
-    export let nom1 = …, nom2 = …, …, nomN; // utilisable avec var, const
-    export function nomFonction(){...}
-    export class NomClasse {...}
+```js
+// Exporter des propriétés individuelles
+export let nom1, nom2, …, nomN; // utilisable avec var, const
+export let nom1 = …, nom2 = …, …, nomN; // utilisable avec var, const
+export function nomFonction(){...}
+export class NomClasse {...}
 
-    // Export d'une liste de valeur
-    export { nom1, nom2, …, nomN };
+// Export d'une liste de valeur
+export { nom1, nom2, …, nomN };
 
-    // Renommage des valeurs exportées
-    export { variable1 as nom1, variable2 as nom2, …, nomN };
+// Renommage des valeurs exportées
+export { variable1 as nom1, variable2 as nom2, …, nomN };
 
-    // Renommage avec la décomposition pour l'affectation
-    export const { nom1, nom2: truc } = o;
+// Renommage avec la décomposition pour l'affectation
+export const { nom1, nom2: truc } = o;
 
-    // Exports par défauts
-    export default expression;
-    export default function (…) { … } // fonctionne avec class, function*
-    export default function nom1(…) { … } // fonctionne avec class, function*
-    export { nom1 as default, … };
+// Exports par défauts
+export default expression;
+export default function (…) { … } // fonctionne avec class, function*
+export default function nom1(…) { … } // fonctionne avec class, function*
+export { nom1 as default, … };
 
-    // Agrégation de modules
-    export * from …;
-    export { nom1, nom2, …, nomN } from …;
-    export { import1 as nom1, import2 as nom2, …, nomN } from …;
-    export { default } from …;
+// Agrégation de modules
+export * from …;
+export { nom1, nom2, …, nomN } from …;
+export { import1 as nom1, import2 as nom2, …, nomN } from …;
+export { default } from …;
+```
 
 - `nomN`
-  - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
+  - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
 
 ## Description
 
-Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus :
+Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus&nbsp;:
 
 - Les exports nommés :
 
@@ -91,7 +94,7 @@ La syntaxe suivante n'exporte pas le défaut depuis le module importé :
 export * from …;
 ```
 
-Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
+Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
 
 ```js
 export {default} from 'mod';
@@ -119,7 +122,7 @@ import { maFonction, maVariable, maClasse } from 'moduleParent.js';
 
 ### Utilisation d'exports nommés
 
-Dans le module, on pourra utiliser le code suivant :
+Dans le module, on pourra utiliser le code suivant&nbsp;:
 
 ```js
 // module "mon-module.js"
@@ -130,7 +133,7 @@ const machin = Math.PI + Math.SQRT2;
 export { cube, machin };
 ```
 
-De cette façon, dans un autre script, on pourra avoir :
+De cette façon, dans un autre script, on pourra avoir :
 
 ```js
 import { cube, machin } from 'mon-module';
@@ -138,12 +141,12 @@ console.log(cube(3)); // 27
 console.log(machin);    // 4.555806215962888
 ```
 
-> **Note :** Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut {{htmlattrxref("type")}} `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
+> **Note :** Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
 > Il n'est pas possible de charger des modules JavaScript via une URL `file://` pour des raisons de sécurité (voir [CORS](/fr/docs/Web/HTTP/CORS) également). Il faudra utiliser un serveur HTTP.
 
 ### Utilisation d'exports par défaut
 
-Si on souhaite n'exporter qu'une seule valeur ou avoir une valeur de secours\* \*pour le module, on peut utiliser un export par défaut :
+Si on souhaite n'exporter qu'une seule valeur ou avoir une valeur de secours pour le module, on peut utiliser un export par défaut&nbsp;:
 
 ```js
 // module "mon-module.js"
@@ -152,30 +155,27 @@ export default function cube(x) {
 }
 ```
 
-Alors, dans un autre script, il sera facile d'importer l'export par défaut :
+Alors, dans un autre script, il sera facile d'importer l'export par défaut :
 
 ```js
 import cube from './mon-module.js';
 console.log(cube(3)); // 27
 ```
 
-Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export default`.
+Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export default`.
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaire         |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-exports', 'Exports')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Instructions/import", "import")}}
 - [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
-- [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
+- [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - [Un billet illustré de Lin Clark, traduit en français, sur les modules](https://tech.mozfr.org/post/2018/04/06/Une-plongee-illustree-dans-les-modules-ECMAScript)

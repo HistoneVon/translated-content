@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/some
 ---
+
 {{JSRef}}
 
 La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -20,7 +21,9 @@ La méthode **`some()`** teste si certains éléments du tableau typé remplisse
 
 ## Syntaxe
 
-    typedarray.some(callback[, thisArg])
+```js
+typedarray.some(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -82,9 +85,9 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
-  });
+  Object.defineProperty(Uint8Array.prototype, 'some', {
+    value: Array.prototype.some
+  });
 }
 ```
 
@@ -92,14 +95,11 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.some")}}
+{{Compat}}
 
 ## Voir aussi
 

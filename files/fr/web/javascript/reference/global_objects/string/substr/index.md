@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/substr
 ---
+
 {{JSRef}}
 
 > **Attention :** Bien que `String.prototype.substr(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui définit l'ensemble des fonctionnalités historiques qui doivent être évitées autant que possible. On utilisera la méthode {{jsxref("String.prototype.substring()")}} à la place.
@@ -21,7 +22,9 @@ La méthode **`substr()`** retourne la partie d'une chaîne de caractères compr
 
 ## Syntaxe
 
-    chn.substr(début[, longueur])
+```js
+chn.substr(début[, longueur])
+```
 
 ### Paramètres
 
@@ -38,19 +41,19 @@ Une nouvelle chaîne contenant la partie indiquée de la chaîne donnée.
 
 `substr()` extrait `longueur` caractères d'une `string`, en comptant à partir de l'indice `début`.
 
-Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
+Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
 
-Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
+Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
 
 Note : dans JScript de Microsoft, les valeurs négatives de l'argument `début` ne sont pas considérées comme faisant référence à la fin de la chaîne.
 
-Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est négative, elle est traitée comme 0.
+Si `longueur` est négative, elle est traitée comme 0.
 
-Pour `début` comme pour `longueur`, NaN est traité comme 0.
+Pour `début` comme pour `longueur`, NaN est traité comme 0.
 
 ## Exemples
 
@@ -77,14 +80,14 @@ if ('ab'.substr(-1) != 'b') {
   /**
    *  Obtenir la sous-chaîne d'une chaîne
    *  @param  {entier}  début     où démarrer la sous-chaîne
-   *  @param  {entier}  longueur  combien de caractères à retourner
+   *  @param  {entier}  longueur combien de caractères à retourner
    *  @return {chaîne}
    */
   String.prototype.substr = function(substr) {
     return function(début, longueur) {
       // Appel de la méthode originale
       return substr.call(this,
-        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
+        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
         // Ajuster le paramètre pour une valeur négative
         début < 0 ? this.length + début : début,
         longueur)
@@ -95,16 +98,11 @@ if ('ab'.substr(-1) != 'b') {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définie dans la Compatibility Annex B (informative). Implémentée dans JavaScript 1.0.        |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Définie dans la Compatibility Annex B (informative).                                         |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.substr")}}
+{{Compat}}
 
 ## Voir aussi
 

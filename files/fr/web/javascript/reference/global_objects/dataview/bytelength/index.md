@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
+
 {{JSRef}}
 
 L'accesseur **`byteLength`** est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
@@ -19,11 +20,13 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur, expr
 
 ## Syntaxe
 
-    dataview.byteLength
+```js
+dataview.byteLength
+```
 
 ## Description
 
-La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut  `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer `référencé qui sera renvoyée.
+La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer` référencé qui sera renvoyée.
 
 ## Exemples
 
@@ -43,14 +46,11 @@ dataview3.byteLength; // 6 (en raison du décalage (offset) pour la construction
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

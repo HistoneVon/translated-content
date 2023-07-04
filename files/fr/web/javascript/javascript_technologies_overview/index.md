@@ -7,6 +7,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## Introduction
@@ -30,7 +31,7 @@ Entre autres choses, ECMAScript définit :
 - Les types de variables (booléen, nombre, chaîne de caractères, fonction, objet...)
 - L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt","parseInt()")}}, {{jsxref("parseFloat","parseFloat()")}}, {{jsxref("decodeURI","decodeURI()")}}, {{jsxref("encodeURI","encodeURI()")}}...)
 - [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
-- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de` `{{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
+- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Support des navigateurs
@@ -63,16 +64,16 @@ Du point de vue d'ECMAScript, les objets définis dans la spécification DOM son
 
 ### Le DOM HTML
 
-[HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, or des API telles que {{domxref("document.body")}}.
+[HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, ou des API telles que {{domxref("document.body")}}.
 
-La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément {{HTMLRef("ul")}} (une liste non-ordonnée) soient des éléments {{HTMLRef("li")}}, puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
+La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) (une liste non-ordonnée) soient des éléments [`<li>`](/fr/docs/Web/HTML/Element/li), puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
 
 Si vous cherchez la documentation sur l'objet {{domxref("Document")}}, l'objet {{domxref("Window")}} ou sur les autres éléments du DOM, vous pouvez lire [la documentation relative au DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko).
 
 ## D'autres API fréquemment utilisées
 
 - Les fonctions {{domxref("WindowTimers.setTimeout", "setTimeout")}} et {{domxref("WindowTimers.setInterval", "setInterval")}} ont d'abord été spécifiées dans l'interface {{domxref("Window")}} du standard HTML.
-- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html "http://dev.w3.org/2006/webapi/XMLHttpRequest-2/") : une API qui permet d'envoyer des requêtes HTTP asynchrones (voir aussi : [la page MDN sur XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest))
+- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) : une API qui permet d'envoyer des requêtes HTTP asynchrones (voir aussi : [la page MDN sur XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest))
 - [CSS Object Model](http://dev.w3.org/csswg/cssom/) : le CSSOM est utilisé pour abstraire les règles CSS sous forme d'objets. (voir aussi : [la page MDN sur CSSOM](/fr/docs/Web/API/CSS_Object_Model))
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) : une API qui permet d'effectuer des calculs parallèles (voir aussi : [la page MDN sur cette API](/fr/docs/Web/API/Web_Workers_API))
 - [WebSockets](https://html.spec.whatwg.org/multipage//#network) : une API qui permet d'effectuer des communications bi-directionnelles de bas-niveau (voir aussi : [la page MDN sur cette API](/fr/docs/WebSockets))

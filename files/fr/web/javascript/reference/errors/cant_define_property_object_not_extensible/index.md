@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Cannot create property for a non-extensible object (Edge)
-    TypeError: can't define property "x": "obj" is not extensible (Firefox)
-    TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
+TypeError: Cannot create property for a non-extensible object (Edge)
+TypeError: can't define property "x": "obj" is not extensible (Firefox)
+TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
 
 ## Type d'erreur
 
@@ -22,7 +25,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_
 
 ## Quel est le problème ?
 
-La plupart du temps, un objet est extensible, ce qui signifie qu'on peut lui ajouter de nouvelles propriétés. Cependant, dans ce cas, on a utilisé la méthode {{jsxref("Object.preventExtensions()")}} afin de marquer l'objet comme non-extensible. Celui-ci ne pourra donc pas recevoir de nouvelles propriétés en plus de celles dont il dispose déjà.
+La plupart du temps, un objet est extensible, ce qui signifie qu'on peut lui ajouter de nouvelles propriétés. Cependant, dans ce cas, on a utilisé la méthode {{jsxref("Object.preventExtensions()")}} afin de marquer l'objet comme non-extensible. Celui-ci ne pourra donc pas recevoir de nouvelles propriétés en plus de celles dont il dispose déjà.
 
 ## Exemples
 

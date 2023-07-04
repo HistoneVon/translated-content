@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logarithme népérien) d'un nombre, défini par :
@@ -19,7 +20,9 @@ La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logari
 
 ## Syntaxe
 
-    Math.log(x)
+```js
+Math.log(x)
+```
 
 ### Paramètres
 
@@ -34,7 +37,7 @@ Le logarithme naturelle de la valeur passée en argument. Si cette valeur est n�
 
 Si la valeur de l'argument est négative, la valeur renvoyée sera {{jsxref("NaN")}}. Si la valeur de l'argument est `0`, la valeur de retour sera {{jsxref("Number.NEGATIVE_INFINITY", "-Infinity")}}.
 
-`log()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.log()`, elle ne doit pas être utilisée à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on veut utiliser les constantes données par les logarithmes naturels de 2 ou 10, on pourra utiliser les constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}}. De même pour les logarithmes en base 2 ou en base 10, on pourra utiliser {{jsxref("Math.log2()")}} or {{jsxref("Math.log10()")}}.
+`log()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.log()`, elle ne doit pas être utilisée à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on veut utiliser les constantes données par les logarithmes naturels de 2 ou 10, on pourra utiliser les constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}}. De même pour les logarithmes en base 2 ou en base 10, on pourra utiliser {{jsxref("Math.log2()")}} or {{jsxref("Math.log10()")}}.
 
 ## Exemples
 
@@ -61,16 +64,11 @@ Si on exécute `getBaseLog(10, 1000)`, on obtiendra `2.9999999999999996` en rais
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## Voir aussi
 

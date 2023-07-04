@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.
@@ -19,7 +20,7 @@ En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Ref
 
 ### Les déclarations de classes
 
-Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici « Rectangle »).
+Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici «&nbsp;Rectangle&nbsp;»).
 
 ```js
 class Rectangle {
@@ -383,22 +384,17 @@ class Truc extends calculetteMixin(aleatoireMixin(Toto)) { }
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                      |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Utilisation via l'éditeur multiligne dans Firefox
 
 Une classe ne peut pas être redéfinie. Si vous testez votre code via l'éditeur multiligne JavaScript de Firefox (Outils > Développement web > Editeur multiligne JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : _redeclaration of let \<class-name>_.
 
-Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et exécuter. À ce sujet, voir le bug {{bug("1428672")}}.
+Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et exécuter. À ce sujet, voir le [bug Firefox 1428672](https://bugzil.la/1428672).
 
 ## Voir aussi
 

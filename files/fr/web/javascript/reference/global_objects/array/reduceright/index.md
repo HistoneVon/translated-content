@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 tags:
   - Array
   - ECMAScript 5
@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduceRight
 ---
+
 {{JSRef}}
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur d'un tableau (de la droite vers la gauche) de sorte à réduire le tableau en une seule valeur.
@@ -21,7 +22,9 @@ Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui ré
 
 ## Syntaxe
 
-    arr.reduceRight(callback[, valeurInitiale])
+```js
+arr.reduceRight(callback[, valeurInitiale])
+```
 
 ### Paramètres
 
@@ -47,13 +50,13 @@ La valeur obtenue grâce à la fonction de réduction.
 
 ## Description
 
-`reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau, les éléments vides sont ignorés. La fonction `callback` utilise quatre arguments : la valeur initiale (ou la valeur retournée par le précédent appel de la fonction` callback`), la valeur de l'élément courant, l'index de l'élément courant, et le tableau qui est parcouru.
+`reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau, les éléments vides sont ignorés. La fonction `callback` utilise quatre arguments : la valeur initiale (ou la valeur retournée par le précédent appel de la fonction `callback`), la valeur de l'élément courant, l'index de l'élément courant, et le tableau qui est parcouru.
 
 L'usage de `reduceRight` avec définition d'un `callback` devrait ressembler à ceci :
 
 ```js
 array.reduceRight(function(accumulator, valeurCourante, index, array) {
-    // ...
+    // ...
 });
 ```
 
@@ -248,15 +251,11 @@ compose(inc, double)(2) // 5
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.reduceRight")}}
+{{Compat}}
 
 ## Voir aussi
 

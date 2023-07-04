@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).
@@ -20,7 +21,9 @@ La méthode **`toLocaleString()`** renvoie une chaîne de caractères représent
 
 ## Syntaxe
 
-    bigIntObj.toLocaleString([locales [, options]])
+```js
+bigIntObj.toLocaleString([locales [, options]])
+```
 
 ### Paramètres
 
@@ -89,7 +92,7 @@ var bigint = 123456789123456789n;
 
 // On utilise un format avec une devise
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// → 123.456.789.123.456.789,00 €
 
 // Le yen japonais n'utilise pas de sous-unité
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
@@ -106,13 +109,11 @@ Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra
 
 ## Spécifications
 
-| Spécification                                                            | État                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| [`BigInt`](https://tc39.es/ecma402/#sup-bigint.prototype.tolocalestring) | Proposition de niveau 3. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

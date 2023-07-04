@@ -1,24 +1,17 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.list-style-type
-translation_of: Web/CSS/list-style-type
 ---
+
 {{CSSRef}}
 
-**`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。</p>
+**`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
 {{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
 マーカーの[色](/ja/docs/Web/CSS/color_value)は、適用先の要素における色の計算値と同じになります。
 
-わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素 (普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定することですべてのリスト項目に適用することができます。</p>
+わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素 (普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定することですべてのリスト項目に適用することができます。
 
 ## 構文
 
@@ -71,7 +64,7 @@ list-style-type: unset;
 - `none`
   - : マーカーは表示されません。
 - `disc`
-  - : 塗りつぶされた円形です (既定値)。 
+  - : 塗りつぶされた円形です (既定値)。
 - `circle`
   - : 中空円です。
 - `square`
@@ -121,7 +114,7 @@ list-style-type: unset;
 - `hiragana` {{experimental_inline}}
   - : ひらがなの辞書順の文字です。
 - `hiragana-iroha` {{experimental_inline}}
-  - : ひらがなの{{interwiki('wikipedia', 'いろは歌', 'いろは順')}}の文字です。
+  - : ひらがなの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
 - `japanese-formal` {{experimental_inline}}
   - : 法律や金融関係の書類に使用される日本の公的な数値表記です。漢字は、他の正しい文字に似せて修正することができないように設計されています。
 - `japanese-informal` {{experimental_inline}}
@@ -131,7 +124,7 @@ list-style-type: unset;
 - `katakana` {{experimental_inline}}
   - : カタカナの辞書順の文字です。
 - `katakana-iroha` {{experimental_inline}}
-  - : カタカナの{{interwiki('wikipedia', 'いろは歌', 'いろは順')}}の文字です。
+  - : カタカナの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
 - `korean-hangul-formal` {{experimental_inline}}
   - : 韓国語のハングルの数値表記です。
 - `korean-hanja-formal` {{experimental_inline}}
@@ -140,7 +133,7 @@ list-style-type: unset;
   - : 韓国語の漢数字です。
 - `lao`, `-moz-lao`
   - : ラオス語の数値表記です。
-- `lower-armenian` {{experimental_inline}}
+- `lower-armenian` {{experimental_inline}}\*
   - : アルメニア語の小文字の数値表記です。
 - `malayalam`, `-moz-malayalam`
   - : マラヤーラム語の数値表記です。
@@ -168,7 +161,7 @@ list-style-type: unset;
   - : 公的な繁体字中国語の数値表記です。
 - `trad-chinese-informal` {{experimental_inline}}
   - : 日常的な繁体字中国語の数値表記です。
-- `upper-armenian` {{experimental_inline}}`
+- `upper-armenian` {{experimental_inline}}\*
   - : 伝統的なアルメニア語の大文字の数値表記です。
 - `disclosure-open` {{experimental_inline}}
   - : {{HTMLElement("details")}} などの展開ウィジェットを開いていることを示す記号
@@ -189,7 +182,7 @@ Mozilla (Firefox)、Blink (Chrome、Opera)、WebKit (Safari) では、他の言�
 
 ## アクセシビリティの考慮
 
-画面リーダーの [VoiceOver](https://help.apple.com/voiceover/info/guide/) には、 `list-style-type` の値に `none` が適用された順序なしリストをリストとして読み上げないという問題があります。リストが正しく読み上げられるようにするには、それぞれのリスト項目の前に[幅ゼロの空白](https://en.wikipedia.org/wiki/Zero-width_space)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加する必要があります。これはデザインがバグ修正に影響されないことを保証し、リスト項目の表記が正しくなくなるわけではありません。
+スクリーンリーダーの [VoiceOver](https://help.apple.com/voiceover/info/guide/) には、 `list-style-type` の値に `none` が適用された順序なしリストをリストとして読み上げないという問題があります。リストが正しく読み上げられるようにするには、それぞれのリスト項目の前に[幅ゼロの空白](https://en.wikipedia.org/wiki/Zero-width_space)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加する必要があります。これはデザインがバグ修正に影響されないことを保証し、リスト項目の表記が正しくなくなるわけではありません。
 
 ```css
 ul {

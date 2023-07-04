@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/test
 ---
+
 {{JSRef}}
 
 La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et une expression rationnelle. Elle retourne `true` en cas de succès et `false` dans le cas contraire.
@@ -18,7 +19,9 @@ La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et 
 
 ## Syntaxe
 
-    regexObj.test(chaîne)
+```js
+regexObj.test(chaîne)
+```
 
 ### Paramètres
 
@@ -31,7 +34,7 @@ Un booléen : `true` ou `false` selon qu'une correspondance a été trouvée ent
 
 ## Description
 
-On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
+On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
 
 ## Exemples
 
@@ -89,20 +92,11 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.test")}}
-
-## Notes spécifiques à Firefox
-
-Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
+{{Compat}}
 
 ## Voir aussi
 

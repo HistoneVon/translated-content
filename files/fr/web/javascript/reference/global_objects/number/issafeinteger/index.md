@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, passée en argument, est un entier représentable correctement en JavaScript (c'est-à-dire un nombre compris entre -(2^53-1) et 2^53-1).
@@ -21,7 +22,9 @@ La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, pas
 
 ## Syntaxe
 
-    Number.isSafeInteger(valeurÀTester)
+```js
+Number.isSafeInteger(valeurÀTester)
+```
 
 ### Paramètres
 
@@ -39,7 +42,7 @@ Un entier correctement représentable en JavaScript :
 - peut exactement être représenté avec un nombre à précision double selon IEEE-754
 - la réprésentation IEEE-754 du nombre ne permet pas de l'arrondir à un autre entier pouvant être représenté avec le format décrit par IEEE-754.
 
-Ainsi, par exemple, `2^53 - 1` peut être représenté correctement, aucun autre entier ne peut être arrondi en cette valeur selon IEEE-754. En revanche, `2^53` ne peut pas être représenté correctement car `2^53 + 1` sera arrondi en `2^53` selon les règles IEEE-754 (arrondi à l'entier le plus proche).
+Ainsi, par exemple, `2^53 - 1` peut être représenté correctement, aucun autre entier ne peut être arrondi en cette valeur selon IEEE-754. En revanche, `2^53` ne peut pas être représenté correctement car `2^53 + 1` sera arrondi en `2^53` selon les règles IEEE-754 (arrondi à l'entier le plus proche).
 
 L'intervalle des entiers qui peuvent être correctement représentés est `[-(2^53 - 1),2^53 - 1` ].
 
@@ -58,14 +61,11 @@ Number.isSafeInteger(3.0);                  // true
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.isSafeInteger")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/match
 ---
+
 {{JSRef}}
 
 Le symbole **`Symbol.match`** définit la correspondance d'une expression rationnelle par rapport à une chaîne de caractères. Cette fonction est appelée par la méthode {{jsxref("String.prototype.match()")}}.
@@ -34,7 +35,7 @@ Le code suivant renverra une exception {{jsxref("TypeError")}} :
 // et que Symbol.match n'a pas été modifié.
 ```
 
-Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiquera que l'objet à prendre en compte n'est pas une expression rationnelle. Les méthodes `startsWith` et `endsWith` ne déclencheront donc pas d'exception `TypeError`.
+Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiquera que l'objet à prendre en compte n'est pas une expression rationnelle. Les méthodes `startsWith` et `endsWith` ne déclencheront donc pas d'exception `TypeError`.
 
 ```js
 var re = /toto/;
@@ -45,14 +46,11 @@ re[Symbol.match] = false;
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.match")}}
+{{Compat}}
 
 ## Voir aussi
 

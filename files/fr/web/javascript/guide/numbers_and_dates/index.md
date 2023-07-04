@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Numbers_and_dates
 original_slug: Web/JavaScript/Guide/Nombres_et_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
 
 Ce chapitre illustre le fonctionnement des nombres et des dates en JavaScript grâce aux concepts, objets et fonctions utilisables avec ce langage. Cela inclut notamment l'écriture de nombre selon différentes bases (décimale, binaire, hexadécimale) et l'utilisation de l'objet global {{jsxref("Math")}}.
@@ -146,7 +147,7 @@ Le tableau qui suit liste certaines des propriétés de `Number`.
     <tr>
       <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
       <td>
-        Le plus petit entier qu'on puisse représenter en JavaScript. (−2^53 + 1
+        Le plus petit entier qu'on puisse représenter en JavaScript. (−2^53 + 1
         ou <code>−9007199254740991</code>)
       </td>
     </tr>
@@ -204,7 +205,7 @@ Le tableau suivant liste les méthodes de l'objet `Math`.
 | {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                                             | Fonctions trigonométriques inverses (les valeurs renvoyées sont exprimées en radians)                                                                                   |
 | {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                                                               | Fonctions trigonométriques hyperboliques (les arguments sont exprimés en radians)                                                                                       |
 | {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                                                   | Fonctions trigonométriques hyperboliques inverses (les valeurs renvoyées sont exprimées en radians).                                                                    |
-| {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | Fonctions exponentielles et logarithmiques                                                                                                                              |
+| {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | Fonctions exponentielles et logarithmiques                                                                                                                              |
 | {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                                                                         | Renvoie le plus petit/grand entier inférieur/supérieur ou égal à l'argument donné                                                                                       |
 | {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                                                                     | Renvoie le plus petit (resp. grand) nombre d'une liste de nombres séparés par des virgules                                                                              |
 | {{jsxref("Math.random", "random()")}}                                                                                                                                                                                                                                       | Renvoie un nombre aléatoire compris entre 0 et 1                                                                                                                        |

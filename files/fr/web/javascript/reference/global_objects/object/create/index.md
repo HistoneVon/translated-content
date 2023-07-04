@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/create
 ---
+
 {{JSRef}}
 
 La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
@@ -19,8 +20,10 @@ La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné
 
 ## Syntaxe
 
-    Object.create(proto)
-    Object.create(proto, objetPropriétés)
+```js
+Object.create(proto)
+Object.create(proto, objetPropriétés)
+```
 
 ### Paramètres
 
@@ -35,7 +38,7 @@ Un nouvel objet qui dispose du prototype et des propriétés indiquées.
 
 ### Exceptions
 
-Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
+Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
 
 ## Exemples
 
@@ -97,7 +100,7 @@ MaClasse.prototype.maMéthode = function() {
 };
 ```
 
-Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
+Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
 
 ### Utiliser l'argument `objetPropriétés` avec `Object.create()`
 
@@ -177,15 +180,11 @@ o2 = Object.create({}, {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES2015', '#sec-object.create', 'Object.create')}}     | {{Spec2('ES2015')}}     |                                                         |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Voir aussi
 

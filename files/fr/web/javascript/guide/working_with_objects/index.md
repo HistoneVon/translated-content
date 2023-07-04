@@ -1,6 +1,6 @@
 ---
 title: Utiliser les objets
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 tags:
   - Beginner
   - Comparing object
@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Working_with_Objects
 original_slug: Web/JavaScript/Guide/Utiliser_les_objets
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript est conçu autour d'un paradigme simple, basé sur les objets. Un objet est un ensemble de propriétés et une propriété est une association entre un nom (aussi appelé _clé_) et une valeur. La valeur d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode ». En plus des objets natifs fournis par l'environnement, il est possible de construire ses propres objets. Ce chapitre aborde la manipulation d'objets, l'utilisation des propriétés, fonctions et méthodes, il explique également comment créer ses objets.
@@ -55,7 +56,7 @@ Les propriétés d'un objet qui n'ont pas été affectées auront la valeur [`un
 maVoiture.color; // undefined
 ```
 
-On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés « tableaux associatifs ». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
+On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés «&nbsp;tableaux associatifs&nbsp;». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
 
 ```js
 maVoiture["fabricant"] = "Ford";
@@ -153,7 +154,7 @@ On peut créer des objets avec une fonction qui est un constructeur, mais on peu
 La syntaxe utilisée avec les initialisateurs d'objets est la suivante :
 
 ```js
-let obj = { 
+let obj = {
   propriete_1:   valeur_1,   // propriete_# peut être un identifiant
             2:   valeur_2,   // ou un nombre
             // ...,
@@ -190,8 +191,8 @@ De la même façon, on pourra utiliser des initialisateurs pour créer des table
 
 On peut aussi créer des objets d'une autre façon, en suivant deux étapes :
 
-1.  On définit une fonction qui sera un constructeur définissant le type de l'objet. La convention, pour nommer les constructeurs, est d'utiliser une majuscule comme première lettre pour l'identifiant de la fonction.
-2.  On crée une instance de l'objet avec `new`.
+1. On définit une fonction qui sera un constructeur définissant le type de l'objet. La convention, pour nommer les constructeurs, est d'utiliser une majuscule comme première lettre pour l'identifiant de la fonction.
+2. On crée une instance de l'objet avec `new`.
 
 Pour définir le type d'un objet, on crée une fonction qui définit le nom de ce type et les propriétés et méthodes des instances. Ainsi, si on souhaite créer un type d'objet pour représenter des voitures, on pourra nommer ce type `voiture`, et il pourra avoir des propriétés pour le fabricant, le modèle et l'année. Pour ce faire, on pourra écrire la fonction suivante :
 
@@ -276,7 +277,7 @@ Les objets peuvent également être créés en utilisant la méthode [`Object.cr
 ```js
 // Propriétés pour animal et encapsulation des méthodes
 let Animal = {
-  type: "Invertébrés",        // Valeur par défaut  value of properties
+  type: "Invertébrés",        // Valeur par défaut value of properties
   afficherType : function() {  // Une méthode pour afficher le type Animal
     console.log(this.type);
   }
@@ -313,7 +314,7 @@ Voiture.prototype.couleur = null;
 voiture1.couleur = "noir";
 ```
 
-Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 ## Définir des méthodes
 
@@ -348,7 +349,7 @@ On peut définir des méthodes pour un type d'objet en incluant la définition d
 ```js
 function afficheVoiture() {
   let resultat = `Une belle ${this.modele}, fabriquée en ${this.annee} par ${this.fabricant}`;
-  console.log(résultat);
+  console.log(resultat);
 }
 ```
 

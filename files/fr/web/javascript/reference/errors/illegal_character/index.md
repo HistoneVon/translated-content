@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 original_slug: Web/JavaScript/Reference/Erreurs/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Invalid character (Edge)
-    SyntaxError: illegal character (Firefox)
-    SyntaxError: Invalid or unexpected token (Chrome)
+```
+SyntaxError: Invalid character (Edge)
+SyntaxError: illegal character (Firefox)
+SyntaxError: Invalid or unexpected token (Chrome)
+```
 
 ## Type d'erreur
 
@@ -74,14 +77,14 @@ var couleurs = ['#000', '#333', '#666'];
 Lorsque vous copiez/collez du code depuis des sources externes, celles-ci peuvent contenir des caractères invalides difficiles à discerner.
 
 ```js example-bad
-var toto = 'truc';​
+var toto = 'truc';
 // SyntaxError: illegal character
 ```
 
 Lorsqu'on inspecte ce code grâce à un éditeur de texte (par exemple Vim), on peut voir qu'il y en fait un [espace sans chasse (ZWSP) (U+200B)](https://fr.wikipedia.org/wiki/Espace_sans_chasse).
 
 ```js
-var toto = 'truc';​<200b>
+var toto = 'truc';<200b>
 ```
 
 ## Voir aussi

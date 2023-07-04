@@ -10,15 +10,18 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/shift
 ---
+
 {{JSRef}}
 
-La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
+La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
 
 {{EmbedInteractiveExample("pages/js/array-shift.html")}}
 
 ## Syntaxe
 
-    arr.shift()
+```js
+arr.shift()
+```
 
 ### Valeur de retour
 
@@ -26,11 +29,11 @@ L'élément retiré du tableau ou {{jsxref("undefined")}} si le tableau est vide
 
 ## Description
 
-La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
+La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
 
 Cette méthode est générique et peut être {{jsxref("Function.call", "appelée","",1)}} ou {{jsxref("Function.apply", "appliquée","",1)}} sur des objets similaires à des tableaux.
 
-Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
+Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
 
 > **Note :** La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
 
@@ -38,7 +41,7 @@ Cette méthode n'est pas exploitable pour les objets dont la propriété `lengt
 
 ### Supprimer un élément d'un tableau
 
-Le code suivant affiche le tableau `mesPoissons` avant et après avoir enlevé le premier élément. Il affiche aussi l'élément supprimé :
+Le code suivant affiche le tableau `mesPoissons` avant et après avoir enlevé le premier élément. Il affiche aussi l'élément supprimé&nbsp;:
 
 ```js
 var mesPoissons = ["ange", "clown", "mandarin", "chirurgien"];
@@ -69,16 +72,11 @@ while ( (i = noms.shift()) !== undefined ) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Voir aussi
 
